@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button>Click</button>
+	<div class="result">0</div>
+	<script>
+		let btn = document.getElementsByTagName("button")[0];
+		btn.addEventListener("click", function() {
+			let num = Number(document.getElementsByClassName("result")[0].innerText);
+			document.getElementsByClassName("result")[0].innerText = num+1;
+		});
+		
+	</script>
+</body>
+</html>
