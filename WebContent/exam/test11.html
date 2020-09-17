@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<button id="btn1">확인</button>
+		<button id="btn2">추가</button>
+	</div>
+	<div id="result">추가 버튼 클릭시 여기에 내용이 적용됩니다.</div>
+	<script>
+		let btn1 = document.querySelector("#btn1"); 
+		let result = document.querySelector("#result"); 
+		btn1.addEventListener("click", function(){
+			console.log(result.innerHTML);
+		});
+		
+		btn2.addEventListener("click", function(){
+			// <h2>추가</h2> 를 div#result 에 추가하는 방법 2가지
+			
+			// 방법 1 -> 원래 내용을 들고와서 추가내용 붙이고 그걸 새로 만들어서 result 에 넣는 거니까 내용이 엄청나게 많을 때는 비효율적
+					// 예로 들면 원래 result 에 1000개 있었고 새로 1개 붙이려면 1000개 들고와서 1개 붙이고 1001개짜리를 새롭게 result에 붙이는 거라서 비효율적
+					// 문제점 더 있음. innerHTML 쓰면 원래 있던 내용이 뭐가 보존이 안 될 수 있다. 이유는 사실 잘 못들었다...
+			result.innerHTML += "<h2>추가</h2>";
+			
+			// 방법 2	: DOM API 사용 -> 기존에 있던 거 놔두고 새로운 것을 붙이는 거니까 효율적 
+// 			const h2Ele = document.createElement("h2");
+// 			h2Ele.innerText = "추가";
+// 			result.append(h2Ele);
+		});
+	</script>
+</body>
+</html>

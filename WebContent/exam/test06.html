@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<input type="text" id="msg">
+	<br><br><br><br><br><br><br><br><br>
+	<div class="result"></div>
+	<script>
+// 		$("#msg").keyup(function() {
+// 			$(".result").text($(this).val());
+// // 			$(".result").text(this.value);	// <- 자바스크립트 객체 사용. 제이쿼리 객체를 쓴 윗 줄과 기능은 동일
+// 		});
+		
+		$("#msg").keyup(e => $(".result").text(e.target.value));	// 화살표 함수 쓸 땐 this가 window라서 이벤트 객체 e 사용함
+	</script>
+</body>
+</html>

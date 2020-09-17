@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<button id="btn1">속성확인</button>
+		<button id="btn2">속성추가</button>
+	</div>
+	<img id="img1" src="../images/ice_americano.jpg">
+	<div class="result"></div>
+	<script>
+		document.getElementById("btn1").addEventListener("click", function(){
+			document.querySelector(".result").innerText = document.getElementById("img1").alt? document.getElementById("img1").alt : "비어있음";
+		});
+		
+		document.getElementById("btn2").addEventListener("click", function(){
+			document.getElementById("img1").alt = "아이스아메리카노";
+		});
+	</script>
+</body>
+</html>

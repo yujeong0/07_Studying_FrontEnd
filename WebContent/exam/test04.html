@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<button>Click</button>
+	<div class="result">0</div>
+	<script>
+		$("button").click(function() {
+			$(".result").text(parseInt($(".result").text())+1);
+		});
+		
+	</script>
+</body>
+</html>

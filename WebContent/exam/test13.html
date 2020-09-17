@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result {
+            width: 300px;
+            height: 300px;
+            font-size: 30px;
+            margin: 10px;
+            text-align: center;
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="btn1">배경색 변경하기(#345)</button>
+        <button id="btn2">글자색 변경하기(white)</button>
+        <button id="btn3">테두리 추가하기(10px solid tomato)</button>
+        <button id="btn4">테두리 둥글게(50%)</button>
+    </div>
+    <div id="result">TEST CSS</div>
+    <script>
+        // 각 버튼 클릭 시 버튼의 타이틀에 맞는 css를 적용한다.
+        // Vanila Javascript 를 이용(element.style.속성 활용)
+//         let result = document.querySelector("#result");
+//         document.querySelector("#btn1").addEventListener("click", function() {
+//         	result.style["background-color"] = '#345';
+//         });
+//         document.querySelector("#btn2").addEventListener("click", function() {
+//         	result.style.color = 'white';
+//         });
+//         document.querySelector("#btn3").addEventListener("click", function() {
+//         	result.style.border = '10px solid tomato';
+//         });
+//         document.querySelector("#btn4").addEventListener("click", function() {
+//         	result.style["border-radius"] = '50%';
+//         });
+
+		// 인라인 스타일 전체 한꺼번에 처리하기
+        const result = document.getElementById('result');
+        result.setAttribute('style',
+            'background-color: #345; color: white; border: 10px solid tomato; border-radius: 50%');
+    </script>
+</body>
+</html>

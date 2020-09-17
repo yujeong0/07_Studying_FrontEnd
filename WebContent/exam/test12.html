@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div>
+		<button id="btn1">확인</button>
+		<button id="btn2">추가</button>
+	</div>
+	<div id="result">추가 버튼 클릭시 여기에 내용이 적용됩니다.</div>
+	<script>
+		$("#btn1").click(function(){
+			console.log(result.innerHTML);
+		});
+		$("#btn2").click(function(){
+			$("#result").append("<h2>추가</h2>");
+		});
+	</script>
+</body>
+</html>
